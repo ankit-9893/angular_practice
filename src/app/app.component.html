@@ -1,0 +1,19 @@
+<div style="text-align: center;">
+  <h1>
+    Welcome to {{title}}
+  </h1>
+
+  <!-- <app-test (childEvent)="childMessage=$event" [parentData]="message"></app-test> -->
+  
+  
+</div>
+<!-- employee list from emploee-list component -->
+<app-employee-list></app-employee-list>
+<br>
+<app-emp-detail></app-emp-detail>
+
+<br> <br>
+<h2>
+  {{childMessage}}
+</h2>
+<app-test (childEvent)="childMessage=$event" [parentData]="message"></app-test>

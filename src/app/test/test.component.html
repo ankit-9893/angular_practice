@@ -1,0 +1,37 @@
+<p>test works!</p>
+<h2>
+  Welcome {{name}}
+</h2>  
+<br><br>
+<h2>
+    {{"Message:- "+data}}
+</h2>  
+
+<br><br>
+<button (click)="firstEvent()">ChildEvent</button>
+
+<br><br>
+<!-- *ngIf directive -->
+<h2 *ngIf="displayName; else elseBlock">
+    {{name}}
+</h2>
+<ng-template #elseBlock>
+    <h4>Name is hidden</h4>
+</ng-template>
+<button (click)="showMessage()">Show Message</button>
+<br><br>
+
+<!-- 2 way binding -->
+<input [(ngModel)]="message" type="text" >
+{{message}}
+<br><br><br>
+
+<!-- template reference variable -->
+<input #myInput type="text" >
+
+<button (click)="myInputMessage(myInput)" >Log</button>
+<br>
+<button (click)="onClick($event)">Greet</button>
+
+{{greetings}}
+{{eventName}}
